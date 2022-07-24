@@ -18,13 +18,13 @@ del entorno necesario para desarrollar nuestra web en Windows y en Linux.
 
 ### 2.1 Entorno Windows
 
-Para poder desarrollar nuestra web basada en Jekyll en windows necesitamos instalar una versión de Ruby específica para este sistema operativo. En nuestro caso vamos a instalar la versión 2.7 que podemos encontrar en [RubyInstaller](rubyinstaller.org/).
+Para poder desarrollar nuestra web basada en Jekyll en windows necesitamos instalar una versión de Ruby específica para este sistema operativo. En nuestro caso vamos a instalar la versión 2.7 que podemos encontrar en [RubyInstaller](https://rubyinstaller.org/).
 
-El proyecto **RubyInstaller** proporciona un instalador autónomo basado en Windows que incluye un entorno de ejecución en lenguaje Ruby y un conjunto básico de RubyGems y extensiones necesarias, integrado con una instalación de [MSYS2](www.msys2.org/).
+El proyecto **RubyInstaller** proporciona un instalador autónomo basado en Windows que incluye un entorno de ejecución en lenguaje Ruby y un conjunto básico de RubyGems y extensiones necesarias, integrado con una instalación de [MSYS2](https://www.msys2.org/).
 
 **MSYS2** es una colección de herramientas y bibliotecas que proporciona un entorno fácil de usar para crear, instalar y ejecutar software nativo de Windows.
 
-Consiste en un terminal de línea de comandos llamado **mintty**, bash, sistemas de control de versiones como git y subversion, herramientas como tar y awk e incluso sistemas de compilación como autotools, todos basados ​​en una versión modificada de [Cygwin](www.cygwin.com/). A pesar de que algunas de estas partes centrales se basan en Cygwin, el objetivo principal de MSYS2 es proporcionar un entorno de compilación para el software nativo de Windows y las partes que utilizan Cygwin se mantienen al mínimo. MSYS2 proporciona compilaciones nativas actualizadas para GCC, mingw-w64, CPython, CMake, Meson, OpenSSL, FFmpeg, Rust, **Ruby**, solo por nombrar algunos.
+Consiste en un terminal de línea de comandos llamado **mintty**, bash, sistemas de control de versiones como git y subversion, herramientas como tar y awk e incluso sistemas de compilación como autotools, todos basados ​​en una versión modificada de [Cygwin](https://www.cygwin.com/). A pesar de que algunas de estas partes centrales se basan en Cygwin, el objetivo principal de MSYS2 es proporcionar un entorno de compilación para el software nativo de Windows y las partes que utilizan Cygwin se mantienen al mínimo. MSYS2 proporciona compilaciones nativas actualizadas para GCC, mingw-w64, CPython, CMake, Meson, OpenSSL, FFmpeg, Rust, **Ruby**, solo por nombrar algunos.
 
 Una vez hemos instalado Ruby en nuestro sistema operativo, abrimos un terminal de windows, **cmd.exe**, y nos disponemos a instalar las dos primeras gemas necesarias para desarrollar con Jekyll. Esto se consigue con la herramienta **gem**, contenida en la instalación previa de RubyInstaller. Estas gemas con **jekyll** y **bundler**. Para instalarlas ejecutamos:
 
@@ -89,7 +89,7 @@ gem "webrick"
 
 Con Jekyll vamos a poder hacer un sitio web desde cero, aunque siempre es más sencillo partir de una plantilla de un sitio web que sea configurable y adaptarla a nuestras necesidades. Nos decantemos por una u otra la estructura báscia de carpetas siempre será la misma.
 
-Suponiendo que nuestro directorio de proyecto es **c:\src\furgonetasolidaria.org**, dentro vamos a tener los siguientes subdirectorios y ficheros básicos:
+Suponiendo que nuestro directorio de proyecto es **c:\src\froita.com**, dentro vamos a tener los siguientes subdirectorios y ficheros básicos:
 
 - **Gemfile**: se trata del fichero de configuración de gemas del lenguje Ruby. En nuestra web vamos a inclir la gema de una plantilla para Jekyll, denominada minimal-mistakes-jekyll, y otras gemas que necesitamos para poder trabajar con dicha plantilla. El contenido lo podemos ver en esta web.
 - **_includes**: se trata de una carpeta donde ubicar todo aquel código fuente que se repite a lo largdo del sitio o para mejorar la legibilidad del proyecto. Por ejemplo, si queremos tener un pie de página homogéneo en nuestro sitio podemos crear un fichero footer.html donde definirlo y ubicarlo en este directorio. Posteriormente mediante el tag include podremos inscrustarlo en una página web
