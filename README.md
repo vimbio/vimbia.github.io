@@ -1,6 +1,6 @@
 # Froita Web
 
-## Introducción
+## 1. Introducción
 
 Proyecto que implementa la web para froita.com. Ha sido realizada
 mediate [Jekyll](https://jekyllrb.com/), una herramienta desarrollada en lenguaje Ruby, que
@@ -11,7 +11,12 @@ Ruby es un leguaje de programación interpretado, similar a un Python o PHP. Los
 Jekyll permite que desarrolladores implementen plantillas de web y las empaqueten como una gema de Ruby, que podremos descargar y modificar según nos interese. Es una forma cómoda de afrontar un desarrollo de una web sin tener que comenzar desde cero con Jekyll. En nuestro caso vamos a usar la gema [minimal-mistakes-jekyll](https://mmistakes.github.io/minimal-mistakes/) creada por
 [Michael Rose](https://github.com/mmistakes).
 
-## Instalación del entorno de desarrollo en Windows
+## 2. Instalación del entorno de desarrollo
+
+Vamos a dar unas pinceladas muy concretas para la instalación y ejecución
+del entorno necesario para desarrollar nuestra web en Windows y en Linux.
+
+### 2.1 Entorno en Windows
 
 Para poder desarrollar nuestra web basada en Jekyll en windows necesitamos instalar una versión de Ruby específica para este sistema operativo. En nuestro caso vamos a instalar la versión 2.7 que podemos encontrar en [RubyInstaller](https://rubyinstaller.org/).
 
@@ -23,17 +28,64 @@ Consiste en un terminal de línea de comandos llamado **mintty**, bash, sistemas
 
 Una vez hemos instalado Ruby en nuestro sistema operativo, abrimos un terminal de windows, **cmd.exe**, y nos disponemos a instalar las dos primeras gemas necesarias para desarrollar con Jekyll. Esto se consigue con la herramienta **gem**, contenida en la instalación previa de RubyInstaller. Estas gemas con **jekyll** y **bundler**. Para instalarlas ejecutamos:
 
-**gem install jekyll bundler**
+```
+gem install jekyll bundler
+```
 
 Estas gemas quedarán instaladas dentro del directorio de instalación que hayamos elegido, en nuestro caso la ubicación es:
 
-**C:\bin\ruby\ruby27-x64\lib\ruby\gems\2.7.0\gems**
+```
+C:\bin\ruby\ruby27-x64\lib\ruby\gems\2.7.0\gems
+```
 
 Para verificar que Jekyll está disponible, basta ejecutarlo por línea de comandos como cualquier aplicación que se encuentre disponible en nuestro entorno, y consultar la versión:
 
-**jekyll -v**
+```
+jekyll -v
+```
 
-## Guía de Jekyll
+### 2.2 Entorno en Linux
+
+En Linux para que arranque el comando jekyll hay que lanzarlo a través de bundle, por ejemplo:
+
+```
+bundle exec jekyll serve
+```
+
+### 2.3 Instalar GEMAS de Ruby
+
+Crear un fichero denominado **Gemfile** con el siguiente contenido:
+
+```bash
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~> 2.0.1'
+gem 'rspec'
+```
+
+Y a continuación en el directorio donde hemos creado el fichero Gemfile, utiliando una gema ya instalada denominada **bundle** ejecutamos:
+
+```
+bundle install
+```
+
+Gemas necesarias para que funcione la platilla minimal-mistakes-jekyll:
+
+```bash
+gem "minimal-mistakes-jekyll"
+gem "tzinfo-data"
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem "jekyll-paginate"
+gem "jekyll-sitemap"
+gem "jekyll-gist"
+gem "jekyll-feed"
+gem "jemoji"
+gem "jekyll-include-cache"
+gem "jekyll-algolia"
+gem "webrick"
+```
+
+## 3. Guía de Jekyll
 
 Con Jekyll vamos a poder hacer un sitio web desde cero, aunque siempre es más sencillo partir de una plantilla de un sitio web que sea configurable y adaptarla a nuestras necesidades. Nos decantemos por una u otra la estructura báscia de carpetas siempre será la misma.
 
@@ -60,52 +112,6 @@ Suponiendo que nuestro directorio de proyecto es **c:\src\furgonetasolidaria.org
 - **assets**: directorio para guardar imágenes, código Javascript y CSS.
 
 
-
-## Instalar GEMAS de Ruby
-
-Crear un fichero denominado **Gemfile:** con el siguiente contenido:
-
-```bash
-source 'https://rubygems.org'
-gem 'nokogiri'
-gem 'rack', '~> 2.0.1'
-gem 'rspec'
-```
-
-Y a continuación en el directorio donde hemos creado el fichero Gemfile, utiliando una gema ya instalada denominada **bundle** ejecutamos:
-
-```bash
-bundle install
-```
-
-Gemas necesarias para que funcione la platilla minimal-mistakes-jekyll:
-
-gem "minimal-mistakes-jekyll"
-
-gem "tzinfo-data"
-
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
-
-gem "jekyll-paginate"
-
-gem "jekyll-sitemap"
-
-gem "jekyll-gist"
-
-gem "jekyll-feed"
-
-gem "jemoji"
-
-gem "jekyll-include-cache"
-
-gem "jekyll-algolia"
-
-gem "webrick"
-
-
-En Linux para que arranque el comando jekyll hay que lanzarlo a través de bundle, por ejemplo:
-
-bundle exec jekyll serve
 
 
 
