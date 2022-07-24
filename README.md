@@ -3,13 +3,13 @@
 ## 1. Introducción
 
 Proyecto que implementa la web para froita.com. Ha sido realizada
-mediate [Jekyll](jekyllrb.com/), una herramienta desarrollada en lenguaje Ruby, que
+mediate [Jekyll](https://jekyllrb.com/), una herramienta desarrollada en lenguaje Ruby, que
 permite crear de forma bastante sencilla y potente webs estáticas. Este tipo de páginas basadas en Jekyll son muy cómodas si nuestra web la queremos alojar en GitHub, pues reconoce los proyectos realizados con esta herramienta y nos facilita su publicación y desarrollo.
 
-[Ruby](www.ruby-lang.org) es un leguaje de programación interpretado, similar a un Python o PHP. Los distintos módulos desarrollados por los programadores se denominan **gemas**. Existe una web donde podemos descargar gemas denominado [RubyGems](rubygems.org/). Aquí es desde donde podemos descargar Jekyll.
+[Ruby](https://www.ruby-lang.org) es un leguaje de programación interpretado, similar a un Python o PHP. Los distintos módulos desarrollados por los programadores se denominan **gemas**. Existe una web donde podemos descargar gemas denominado [RubyGems](https://rubygems.org/). Aquí es desde donde podemos descargar Jekyll.
 
-Jekyll permite que desarrolladores implementen plantillas de web y las empaqueten como una gema de Ruby, que podremos descargar y modificar según nos interese. Es una forma cómoda de afrontar un desarrollo de una web sin tener que comenzar desde cero con Jekyll. En nuestro caso vamos a usar la gema [minimal-mistakes-jekyll](mmistakes.github.io/minimal-mistakes/) creada por
-[Michael Rose](github.com/mmistakes).
+Jekyll permite que desarrolladores implementen plantillas de web y las empaqueten como una gema de Ruby, que podremos descargar y modificar según nos interese. Es una forma cómoda de afrontar un desarrollo de una web sin tener que comenzar desde cero con Jekyll. En nuestro caso vamos a usar la gema [minimal-mistakes-jekyll](https://mmistakes.github.io/minimal-mistakes/) creada por
+[Michael Rose](https://github.com/mmistakes).
 
 ## 2. Instalación del entorno de desarrollo
 
