@@ -1,4 +1,4 @@
-# ***[vim.bio.](https://vim.bio)*** Web
+# ***[vim.bio](https://vim.bio)*** Web
 
 ## 1. Introducción
 
